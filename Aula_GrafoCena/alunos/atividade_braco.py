@@ -63,29 +63,32 @@ class Braco(Base):
         self.garra.setPosition([0, 1.0, 0])
         self.cotovelo.add(self.garra)
 
-    def update(self):
-        angulo = VELOCIDADE * self.deltaTime
-        # TODO 4: A e D giram a base em torno do eixo Y.
-        if self.isKeyPressed("a"):
-            self.base.rotateY(angulo)
+   
+def update(self):
+    angulo = VELOCIDADE * self.deltaTime
 
-        if self.isKeyPressed("d"):
-            self.base.rotateY(-angulo)
+    # TODO 4: A e D giram a base em torno do eixo Y.
+    if self.isKeyPressed("a"):
+        self.base.rotateY(angulo)
 
-        # TODO 5: W e S giram o ombro e I e K giram o cotovelo, ambos em torno do eixo Z.
-        self.renderer.render(self.scene, self.camera)
+    if self.isKeyPressed("d"):
+        self.base.rotateY(-angulo)
 
-        if self.isKeyPressed("w"):
-            self.ombro.rotateZ(angulo)
+    # TODO 5: W e S giram o ombro e I e K giram o cotovelo, ambos em torno do eixo Z.
+    if self.isKeyPressed("w"):
+        self.ombro.rotateZ(angulo)
 
-        if self.isKeyPressed("s"):
-            self.ombro.rotateZ(-angulo)
+    if self.isKeyPressed("s"):
+        self.ombro.rotateZ(-angulo)
 
-        if self.isKeyPressed("i"):
-            self.cotovelo.rotateZ(angulo)
+    if self.isKeyPressed("i"):
+        self.cotovelo.rotateZ(angulo)
 
-        if self.isKeyPressed("k"):
-            self.cotovelo.rotateZ(-angulo)
+    if self.isKeyPressed("k"):
+        self.cotovelo.rotateZ(-angulo)
+
+    self.renderer.render(self.scene, self.camera)
+
 
 
 if __name__ == '__main__':
