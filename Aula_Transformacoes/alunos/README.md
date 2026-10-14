@@ -66,7 +66,9 @@ STEMKOSKI, Lee; PASCALE, Michael. *Developing graphics frameworks with Python an
 
 **Atividade:** Mini Sistema Solar – Transformações Geométricas
 
-**Integrante:** Carlos Eduardo Santos Almeida
+**Integrante 1:** Carlos Eduardo Santos Almeida
+
+**Integrante 2:** Lucas de Souza Carmo
 
 ### Descrição da implementação
 
